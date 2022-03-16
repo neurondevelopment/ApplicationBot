@@ -1,0 +1,28 @@
+{
+    "token": "Discord Bot Token",
+    "footer": "TEST",
+    "defaultEmbedColour": "RANDOM",
+    "application": {
+        "serverID": "Server ID",
+        "colour": "BLUE",
+        "applyContent": "Select the role you wish to apply for below!",
+        "questionContent": "You have received a question for your **{[APPLICATION]}** application\nQuestion: `{[QUESTION]}`",
+        "accept": "Accept",
+        "acceptEmoji": "✅",
+        "deny": "Deny",
+        "denyEmoji": "❌",
+        "submit": "Submit",
+        "submitEmoji": "✅",
+        "cancel": "Cancel",
+        "cancelEmoji": "❌",
+        "question": "Ask Question",
+        "questionEmoji": "❓",
+        "respond": "Respond",
+        "respondEmoji": "✍️",
+        "loggingChannel": ""
+    },
+    "status": {
+        "type": "WATCHING",
+        "content": "Neuron Development"
+    }
+}

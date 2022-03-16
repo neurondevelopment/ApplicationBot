@@ -1,0 +1,27 @@
+{
+    "testapplication": {
+        "enabled": true,
+        "description": "test description",
+        "emoji": "🤡",
+        "questions": ["Question 1", "Question 2", "Question 3"],
+        "discord": "none",
+        "roles": ["RoleID"],
+        "restricted": [],
+        "category": "Channel ID",
+        "acceptMessage": "Your application for **{[APPLICATION]}** has been accepted",
+        "denyMessage": "You have been denied from **{[APPLICATION]}**\nReason: `{[REASON]}`"
+    },
+    "testapplication2": {
+        "enabled": true,
+        "description": "test description",
+        "emoji": "🤡",
+        "questions": ["Question 1", "Question 2", "Question 3"],
+        "discord": "none",
+        "roles": ["RoleID"],
+        "restricted": [],
+        "category": "Channel ID",
+        "acceptMessage": "Your application for **{[APPLICATION]}** has been accepted",
+        "denyMessage": "You have been denied from **{[APPLICATION]}**\nReason: `{[REASON]}`"
+    }
+
+}
