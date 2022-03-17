@@ -111,4 +111,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [issues-shield]: https://img.shields.io/github/issues/neurondevelopment/ApplicationBot.svg?style=for-the-badge
 [issues-url]: https://github.com/neurondevelopment/ApplicationBot/issues
 [license-shield]: https://img.shields.io/github/license/neurondevelopment/ApplicationBot.svg?style=for-the-badge
-[license-url]: https://github.com/neurondevelopment/ApplicationBot/blob/master/LICENSE.txt
+[license-url]: https://github.com/neurondevelopment/ApplicationBot/blob/main/LICENSE
