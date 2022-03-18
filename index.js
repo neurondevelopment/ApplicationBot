@@ -22,7 +22,6 @@ for (const file of commandFiles) {
 }
 
 const db = require('./db/applications.json')
-const filter = m => m.author.id === interaction.user.id
 const { colour, accept, acceptEmoji, deny, denyEmoji, submit, submitEmoji, cancel, cancelEmoji, questionContent, serverID, question, questionEmoji, respond, respondEmoji, loggingChannel } = require('./config.json').application
 let logChann
 
@@ -69,6 +68,7 @@ client.on('ready', async () => {
 })
 
 client.on('interactionCreate', async(interaction) => {
+    const filter = m => m.author.id === interaction.user.id
     if(interaction.isSelectMenu()) {
         if(interaction.customId === 'selectApplication') {
             await interaction.deferReply({ ephemeral: true })
