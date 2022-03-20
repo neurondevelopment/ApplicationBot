@@ -79,7 +79,7 @@ client.on('interactionCreate', async(interaction) => {
             if(curr.enabled !== true) return interaction.reply({ content: `This application is currently closed!`, ephemeral: true})
             const embed = new Discord.MessageEmbed()
                 .setColor(colour)
-                .setAuthor({ text: `${interaction.values[0]}`, iconURL: interaction.user.displayAvatarURL() })
+                .setAuthor({ name: `${interaction.values[0]}`, iconURL: interaction.user.displayAvatarURL() })
                 .setDescription(`**${curr.questions.join('**\nNothing specified\n**')}**\nNothing specified`)
                 .setFooter({ text: `${footer} - Made By Cryptonized` })
 
@@ -292,7 +292,7 @@ client.on('interactionCreate', async(interaction) => {
         
             if(logChann) {
                 const embed = new Discord.MessageEmbed()
-                    .setAuthor({ text: `${user.user.tag} Accepted`, iconURL: user.user.displayAvatarURL() })
+                    .setAuthor({ name: `${user.user.tag} Accepted`, iconURL: user.user.displayAvatarURL() })
                     .setColor('GREEN')
                     .setDescription(`\`${user.user.tag}\` \`(${user.id})\` was accepted into \`${interaction.message.embeds[0].fields[2].value}\` by \`${interaction.user.tag}\` \`(${interaction.user.id})\``)
                     .setThumbnail(user.user.displayAvatarURL())
@@ -327,7 +327,7 @@ client.on('interactionCreate', async(interaction) => {
 
             if(logChann) {
                 const embed = new Discord.MessageEmbed()
-                    .setAuthor({ text: `${user.user.tag} Denied`, iconURL: user.user.displayAvatarURL() })
+                    .setAuthor({ name: `${user.user.tag} Denied`, iconURL: user.user.displayAvatarURL() })
                     .setColor('RED')
                     .setDescription(`\`${user.user.tag}\` \`(${user.id})\` was denied from \`${interaction.message.embeds[0].fields[2].value}\` by \`${interaction.user.tag}\` \`(${interaction.user.id})\`\nReason: \`${value}\``)
                     .setThumbnail(user.user.displayAvatarURL())
@@ -343,7 +343,7 @@ client.on('interactionCreate', async(interaction) => {
         else if(interaction.customId === 'forcedelete') {
             if(logChann) {
                 const embed = new Discord.MessageEmbed()
-                    .setAuthor({ text: `${user.user.tag} Force Deleted`, iconURL: user.user.displayAvatarURL() })
+                    .setAuthor({ name: `${user.user.tag} Force Deleted`, iconURL: user.user.displayAvatarURL() })
                     .setColor('RED')
                     .setDescription(`Application from \`${user.user.tag}\` \`(${user.id})\` for \`${interaction.message.embeds[0].fields[2].value}\` was force deleted by \`${interaction.user.tag}\` \`(${interaction.user.id})\``)
                     .setThumbnail(user.user.displayAvatarURL())
@@ -420,7 +420,7 @@ client.on('interactionCreate', async(interaction) => {
 
             if(logChann) {
                 const embed = new Discord.MessageEmbed()
-                    .setAuthor({ text: `${user.user.tag} Sent Question`, iconURL: user.user.displayAvatarURL() })
+                    .setAuthor({ name: `${user.user.tag} Sent Question`, iconURL: user.user.displayAvatarURL() })
                     .setColor('ORANGE')
                     .setDescription(`\`${interaction.user.tag}\` \`(${interaction.user.id})\` sent a question \`(${value})\` to \`${user.user.tag}\` \`(${user.user.id})\` for the application of \`${interaction.message.embeds[0].fields[2].value}\``)
                     .setThumbnail(user.user.displaydisplayAvatarURL())
