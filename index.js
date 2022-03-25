@@ -21,6 +21,12 @@ for (const file of commandFiles) {
     client.commands.set(command.data.name, command);
 }
 
+process.on('unhandledRejection', (reason, promise) => {
+    const pr = Promise.resolve(promise);
+    console.log(`Unhandled Rejection at: ${reason.stack || reason} | ${pr}`);
+
+});
+
 const db = require('./db/applications.json')
 const { colour, accept, acceptEmoji, deny, denyEmoji, submit, submitEmoji, cancel, cancelEmoji, questionContent, serverID, question, questionEmoji, respond, respondEmoji, loggingChannel } = require('./config.json').application
 let logChann
