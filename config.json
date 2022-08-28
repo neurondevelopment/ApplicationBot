@@ -3,7 +3,7 @@
     "footer": "TEST",
     "defaultEmbedColour": "RANDOM",
     "application": {
-        "serverID": "Server ID",
+        "serverID": "Channel ID",
         "colour": "BLUE",
         "applyContent": "Select the role you wish to apply for below!",
         "questionContent": "You have received a question for your **{[APPLICATION]}** application\nQuestion: `{[QUESTION]}`",
@@ -19,7 +19,7 @@
         "questionEmoji": "❓",
         "respond": "Respond",
         "respondEmoji": "✍️",
-        "loggingChannel": ""
+        "loggingChannel": "Channel ID"
     },
     "status": {
         "type": "WATCHING",

@@ -1,7 +1,6 @@
-const Discord = require('discord.js');
 const db = require('../db/applications.json')
 const { applyContent } = require('../config.json').application
-const { SlashCommandBuilder } = require('@discordjs/builders');
+const { SlashCommandBuilder, ActionRowBuilder, SelectMenuBuilder } = require('discord.js')
 
 module.exports = {
     perms: [],
@@ -21,7 +20,7 @@ module.exports = {
             }
         }
 
-        const select = 	new Discord.MessageSelectMenu()
+        const select = 	new SelectMenuBuilder()
             .setCustomId('selectApplication')
             .setPlaceholder('Nothing selected')
             .setMinValues(1)
@@ -40,7 +39,7 @@ module.exports = {
 
         })
 
-        const row = new Discord.MessageActionRow()
+        const row = new ActionRowBuilder()
 			.addComponents(select);
 
         interaction.reply({ content: `${applyContent}`, components: [row], ephemeral: true})

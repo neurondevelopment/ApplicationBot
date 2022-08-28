@@ -4,10 +4,10 @@
         "description": "test description",
         "emoji": "🤡",
         "questions": ["Question 1", "Question 2", "Question 3"],
-        "discord": "none",
+        "discord": "ID of server to invite to",
         "roles": ["RoleID"],
         "restricted": [],
-        "category": "Channel ID",
+        "category": "Category ID",
         "acceptMessage": "Your application for **{[APPLICATION]}** has been accepted",
         "denyMessage": "You have been denied from **{[APPLICATION]}**\nReason: `{[REASON]}`"
     },
