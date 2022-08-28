@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const fs = require('fs')
+const undici = require('undici')
 const { token, footer } = require('./config.json');
 const figlet = require('figlet')
 const { Routes, InteractionType, ButtonBuilder, ActionRowBuilder, TextInputBuilder, EmbedBuilder, SelectMenuBuilder, ChannelType, TextInputStyle, ModalBuilder, ButtonStyle } = require('discord.js')
@@ -30,8 +31,18 @@ const db = require('./db/applications.json')
 const { colour, accept, acceptEmoji, deny, denyEmoji, submit, submitEmoji, cancel, cancelEmoji, questionContent, serverID, question, questionEmoji, respond, respondEmoji, loggingChannel } = require('./config.json').application
 let logChann
 
+async function checkVersion() {
+    const bot = 'ApplicationBot'
+    const req = await undici.request(`https://raw.githubusercontent.com/neurondevelopment/${bot}/main/package.json`)
+    const data = await req.body.json()
+    if(data.version > require('./package.json').version) {
+        console.log('\x1b[33m%s\x1b[0m', `New version available, please update to v${data.version} at https://github.com/neurondevelopment/${bot}`)
+    }
+}
+
 client.on('ready', async () => {
-    logChann = await client.channels.fetch(loggingChannel).catch(err => { console.log(err) })
+    checkVersion()
+    logChann = await client.channels.fetch(loggingChannel).catch(err => { })
     const {serverID } = require('./config.json').application
     const rest = new REST({ version: '10' }).setToken(token);
 

@@ -12,6 +12,7 @@
     "@discordjs/rest": "^1.1.0",
     "discord-api-types": "^0.37.5",
     "discord.js": "^14.3.0",
-    "figlet": "^1.5.2"
+    "figlet": "^1.5.2",
+    "undici": "^5.10.0"
   }
 }
