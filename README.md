@@ -79,7 +79,7 @@ This is an example of how to list things you need to use the software and how to
 ### Permissions
 By default, every command is open for everyone, which is maybe not ideal for some commands. 
 In each command file, there is an array called perms, it looks like perms: []
-Inside, you can add either a role ID or a permission to use that command, a role id looking like "843429294848081920", or a permission looking like "ADMINISTRATOR"
+Inside, you can add either a role ID or a permission to use that command, a role id looking like "843429294848081920", or a permission looking like "Administrator"
 
 The final array should look something like
 ```js
