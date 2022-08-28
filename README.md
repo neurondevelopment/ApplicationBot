@@ -83,7 +83,7 @@ Inside, you can add either a role ID or a permission to use that command, a role
 
 The final array should look something like
 ```js
-perms: ["843429294848081920", "MANAGE_MESSAGES"]
+perms: ["843429294848081920", "ManageMessages"]
 ```
 This will allow anyone with the role that has the ID 843429294848081920, or anyone with the manage messages permission to run this command
 
