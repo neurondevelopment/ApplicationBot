@@ -3,7 +3,7 @@ const fs = require('fs')
 const undici = require('undici')
 const { token } = require('./config.json');
 const figlet = require('figlet')
-const { Routes, InteractionType } = require('discord.js')
+const { Routes, InteractionType, ActivityType } = require('discord.js')
 const { REST } = require('@discordjs/rest');
 
 const client  = new Discord.Client({
@@ -74,10 +74,10 @@ client.on('ready', async () => {
 
     if(type && content) {
         if(type.toUpperCase() === 'PLAYING') {
-            client.user.setActivity(content, { type: 'PLAYING' })
+            client.user.setActivity(content, { type: ActivityType.Playing })
         }
         else if(type.toUpperCase() === 'WATCHING') {
-            client.user.setActivity(content, { type: 'WATCHING' })
+            client.user.setActivity(content, { type: ActivityType.Watching })
         }
         else {
             console.log('Invalid type specified for the bot\'s status')
